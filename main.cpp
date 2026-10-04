@@ -1,20 +1,48 @@
 #include <iostream>
+#include <string>
 
-// Lab 6 — Joshua Van Brunt
-// CIS 5 Week 06 · Even and odd
+// Homework 6 —Joshua Van Brunt
+// CIS 5 Week 06 · Menu
 
 int main() {
-	int even = 0;
-	for (int i = 0; i <= 100; i += 2) {
-		even += i;
+	int selection = 0;
+	
+	do { 
+		std::cout << "\n===== MENU =====" << std::endl;
+		std::cout << "1. Say Hello" << std::endl;
+		std::cout << "2. Count Down" << std::endl;
+		std::cout << "3. Exit" << std::endl;
+		std::cout << "Enter your choice: ";
+		std::cin >> selection;
+		
+		if (selection == 1) {
+			std::string user;
+			std::cout << "Enter your name: ";
+			std::cin >> user;
+			std::cout << "Hello, " << user << "!" << std::endl;
+		}
+		else if (selection == 2) {
+			int number = 10;
+			std::cout << "Counting down:" << std::endl;
+			while (number >= 1) {
+				std::cout << number << std::endl;
+				number--;
+			}
+		}
+		else if (selection == 3) {
+
+		}
+		else {
+			std::cout << "Invalid choice. Please try again." << std::endl;
+		}
+
+		
 	}
-	int odd = 1;
-	int sum = 0;
-	while (odd <= 99) {
-		sum += odd;
-		odd += 2;
+
+	while (selection !=3 ); {
+		std::cout << "Invalid input. Please enter a number between 1 and 3." << std::endl;
 	}
-	std::cout << "Sum of even numbers: " << even << std::endl;
-	std::cout << "Sum of odd numbers: " << sum << std::endl;
+	
+
 	return 0;
 }
