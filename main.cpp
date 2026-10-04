@@ -1,10 +1,20 @@
 #include <iostream>
-#include <string>
 
-// Homework 6 — Your Name
-// CIS 5 Week 06 · Menu
+// Lab 6 — Joshua Van Brunt
+// CIS 5 Week 06 · Even and odd
 
 int main() {
-
-  return 0;
+	int even = 0;
+	for (int i = 0; i <= 100; i += 2) {
+		even += i;
+	}
+	int odd = 1;
+	int sum = 0;
+	while (odd <= 99) {
+		sum += odd;
+		odd += 2;
+	}
+	std::cout << "Sum of even numbers: " << even << std::endl;
+	std::cout << "Sum of odd numbers: " << sum << std::endl;
+	return 0;
 }
